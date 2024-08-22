@@ -1,9 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="refresh" content="0; url=/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found</title>
+    <script type="text/javascript">
+      // Redirect all 404 errors back to the index.html for React Router to handle the routing
+      var redirect = function () {
+        var origin = window.location.origin;
+        var pathname = window.location.pathname.replace(/\/$/, "");
+        window.location.replace(origin + "/" + pathname + window.location.search);
+      };
+      redirect();
+    </script>
   </head>
   <body>
-    <p>If you are not redirected automatically, follow <a href="/data-visualization/">this link</a>.</p>
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected automatically, <a href="/">click here</a>.</p>
   </body>
 </html>
