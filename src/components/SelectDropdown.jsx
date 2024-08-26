@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
-import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
+import React, { useEffect, useState } from "react"
+import InputLabel from "@mui/material/InputLabel"
+import MenuItem from "@mui/material/MenuItem"
+import FormControl from "@mui/material/FormControl"
+import Select from "@mui/material/Select"
 
 
-function SelectDropdown({materials, selectedName, handleSelectChange, selectedValue}) {
+function SelectDropdown({materials, handleSelectChange, selectedValue}) {
   
   return (
     <div>
@@ -29,8 +28,8 @@ function SelectDropdown({materials, selectedName, handleSelectChange, selectedVa
           )}
             </Select>
           </FormControl>
-          <div className="flex justify-center items-center text-3xl w-full ">
-            <h3 className="text-2xl font-bold">{selectedValue}</h3>
+          <div className="flex justify-center items-center mt-10 w-full ">
+            <h3 className="text-5xl font-bold">{selectedValue}</h3>
           </div>
         </div>
         <div>

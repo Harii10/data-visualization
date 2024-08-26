@@ -54,7 +54,7 @@ function Login() {
             </div>
 
             <div>
-            <NavLink to="/frontend/dashboard">
+            <NavLink to="/data-visualization/dashboard">
             <button
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm "

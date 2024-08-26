@@ -31,7 +31,10 @@ export default {
     extend: {
       width:{
         '97':'1110px',
-        // '98': '100px'
+        '98': '1250px'
+      },
+      height:{
+        '97': '500px'
       },
       margin:{
         '75': '295px',

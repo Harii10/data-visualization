@@ -1,32 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { TbLogout2 } from "react-icons/tb";
-import Search from "./Search";
+import { SiAlwaysdata } from "react-icons/si";
+
 
 function Header() {
-  const[isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(()=>{
-    const handleScroll = () =>{
-      if(window.scrollY > 10){
-        setIsScrolled(true)
-      }
-      else{
-        setIsScrolled(false)
-      }
-    }
-    window.addEventListener('scroll', handleScroll)
-
-    // return ()=> window.removeEventListener('scroll', handleScroll)
-  },[])
   return (
     <>
       <header className="hidden lg:block xl:block 2xl:block ">
         <div className="flex">
           <div className="flex h-screen flex-col justify-between border-e bg-main-20 w-72 fixed top-0">
             <div className="px-4 py-6">
-              <span className="grid h-10 w-32 place-content-center rounded-lg bg-main-30 text-xs text-white">
-                Logo
+              <span className="flex justify-center items-center ml-20 text-6xl bg-main-30 rounded-full text-white w-fit p-2 ">
+                <SiAlwaysdata/>
               </span>
 
               <ul className="mt-12 space-y-3">
@@ -38,7 +23,7 @@ function Header() {
                   </li>
                 </NavLink>
 
-                <li>
+                {/* <li>
                   <details className="group [&_summary::-webkit-details-marker]:hidden">
                     <summary className="flex cursor-pointer items-center justify-between rounded-lg p-4 text-white hover:bg-main-40 hover:text-white">
                       <span className="text-sm font-medium"> Teams </span>
@@ -88,34 +73,22 @@ function Header() {
                   >
                     Billing
                   </a>
-                </li>
+                </li> */}
 
-                <li>
-                  <a
-                    href="#"
+                <NavLink
+                to='tsection'>
+                  <li
                     className="block rounded-lg p-4 text-sm font-medium text-white hover:bg-main-40 hover:text-white"
                   >
-                    Invoices
-                  </a>
-                </li>
+                    Tables
+                  </li>
+                </NavLink>
 
                 <NavLink to="contact">
                   <li className="block rounded-lg p-4 text-sm font-medium text-white hover:bg-main-40 hover:text-white">
                     Contact Us
                   </li>
                 </NavLink>
-
-                <li>
-                  <form action="#">
-                    <button
-                      type="submit"
-                      className="flex gap-2 w-full rounded-lg p-4 text-sm font-medium [text-align:_inherit] text-white hover:bg-main-40 hover:text-white"
-                    >
-                      <TbLogout2 className="mt-1" />
-                      Logout
-                    </button>
-                  </form>
-                </li>
               </ul>
             </div>
 
@@ -140,14 +113,7 @@ function Header() {
               </a>
             </div>
           </div>
-          <div className={`flex justify-between items-center transition-all duration-100 ease-in w-full m-4 ml-80 p-4 ${isScrolled ? " sticky top-0 w-3/4 bg-white shadow-lg rounded-xl border border-gray-300" : "bg-transparent"}`}>
-            <div>
-              <span>Dashboard</span>
-            </div>
-            <div>
-              <Search/>
-              </div>
-          </div>
+          
         </div>
       </header>
     </>

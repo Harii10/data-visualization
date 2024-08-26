@@ -4,6 +4,9 @@ function Contact() {
   return (
     <div>
       <div className="ml-80 my-10 mx-12 p-5 shadow-lg rounded-xl border border-gray-300 bg-white">
+      <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
+          Contact Us
+        </h1>
         <form action="" className="mt-8 grid grid-cols-6 gap-6">
           <div className="col-span-6 sm:col-span-3">
             <label
@@ -59,6 +62,9 @@ function Contact() {
             placeholder=""
           ></textarea>
         </form>
+        <button className="mt-5 w-full rounded-md bg-main-30 text-white shadow-sm h-10">
+          Send
+        </button>
       </div>
     </div>
   );

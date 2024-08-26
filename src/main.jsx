@@ -6,6 +6,7 @@ import Login from './components/Login.jsx';
 import Layout from './components/Layout.jsx';
 import Contact from './components/Contact.jsx';
 import Dashboard from './components/Dashboard.jsx';
+import Tsection from './components/Tsection.jsx';
 
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
     {
       path: 'contact',
       element: <Contact/>
+    },
+    {
+      path: 'tsection',
+      element: <Tsection/>
     }
   ]
   }

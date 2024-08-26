@@ -1,16 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { RiFlag2Line } from "@remixicon/react";
-import {
-  Badge,
-  Card,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeaderCell,
-  TableRow,
-} from "@tremor/react";
+
 
 function Tables() {
   const [tData, setTdata] = useState([]);
@@ -24,21 +15,21 @@ function Tables() {
   return (
     <>
       <div>
-      <div class="block w-full overflow-x-auto">
+      <div class="block w-full overflow-x-auto h-97">
       <table class="items-center bg-transparent w-full border-collapse ">
-        <thead>
+        <thead className="sticky top-0 bg-main-40 text-white">
         <tr>
             <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                           Name
                         </th>
           <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                          Strength
+          Area Measurements
                         </th>
            <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                          Resistance
+           Construction Cost
                         </th>
           <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                          Score
+          Durability
                         </th>
           </tr>
         </thead>
@@ -49,14 +40,14 @@ function Tables() {
               {item.Name}
             </th>
             <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-              {item.Strength}
+              {item.Area_Measurements}
             </td>
             <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-              {item.Resistance}
+              {Math.round(item.Construction_Cost_Over_Time_Years)}
             </td>
             <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
               <i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
-              {Math.round(item.Material_Score)}
+              {Math.round(item.Durability)}
             </td>
           </tr>
         ))}
