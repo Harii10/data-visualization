@@ -1,18 +1,4 @@
-// /** @type {import('tailwindcss').Config} */
-// export default {
-//   content: [
-//     "./index.html",
-//     "./src/**/*.{js,ts,jsx,tsx}",
-//   ],
-//   theme: {
-//     extend: {
-//       margin:{
-//         '75': '295px'
-//       },
-//     },
-//   },
-//   plugins: [],
-// }
+
 
 /** @type {import('tailwindcss').Config} */
 import colors from 'tailwindcss/colors';
@@ -29,6 +15,9 @@ export default {
     transparent: 'transparent',
     current: 'currentColor',
     extend: {
+      fontFamily:{
+          'roboto-mono': ['"Roboto Mono"', 'monospace']
+      },
       width:{
         '97':'1110px',
         '98': '1250px'

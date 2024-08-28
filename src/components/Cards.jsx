@@ -31,7 +31,7 @@ function Cards() {
       'icon': <RiMoneyDollarCircleFill/>
     },
     {
-      'name': 'Datas per Material',
+      'name': 'Data of Material',
       'count': 10,
       'icon': <GiDatabase/>
     },

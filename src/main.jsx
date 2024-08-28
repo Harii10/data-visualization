@@ -1,18 +1,18 @@
 import React, { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Login from './components/Login.jsx';
+import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import Layout from './components/Layout.jsx';
 import Contact from './components/Contact.jsx';
 import Dashboard from './components/Dashboard.jsx';
 import Tsection from './components/Tsection.jsx';
+import Getstarted from './components/Getstarted.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: '/data-visualization',
-    element: <Login/>
+    element: <Getstarted/>
   },
   {
     path: '/data-visualization',
