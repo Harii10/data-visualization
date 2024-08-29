@@ -6,7 +6,6 @@ import Cards from "./Cards"
 import Chart from './Chart'
 import SelectDropdown from "./SelectDropdown"
 import axios from 'axios'
-import { AiFillPieChart } from "react-icons/ai";
 
 function Dashboard() {
 
@@ -18,7 +17,7 @@ function Dashboard() {
 
 useEffect(()=>{
   // axios.get('http://127.0.0.1:8000/list/')
-  axios.get('Jonsnow7.pythonanywhere.com/list/')
+  axios.get('https://jonsnow7.pythonanywhere.com/list/')
   .then((response) => setMaterials(response.data))
   .catch((error) => console.error('Error fetching data:', error))
 }, [])
@@ -26,7 +25,7 @@ useEffect(()=>{
 
 useEffect(()=>{
   // axios.get('http://127.0.0.1:8000/nestedlist/')
-  axios.get('Jonsnow7.pythonanywhere.com/nestedlist/')
+  axios.get('https://jonsnow7.pythonanywhere.com/nestedlist/')
   .then((response) => setSelectedData(response.data))
   .catch((error) => console.error('Error fetching data:', error))
 }, [])

@@ -6,16 +6,15 @@ import { useEffect, useState } from "react"
 import axios from 'axios'
 
 function Search({optionValue, setSearchTerm}) {
-  const [selectValue, setSelectValue] = useState([])
 
-  useEffect(()=>{
-    // axios.get('http://127.0.0.1:8000/list/')
-    axios.get('Jonsnow7.pythonanywhere.com/list/')
-    .then(response => {
-      const value = response.data
-      setSelectValue(value)
-    })
-  })
+  // useEffect(()=>{
+  //   axios.get('http://127.0.0.1:8000/list/')
+  //   axios.get('https://jonsnow7.pythonanywhere.com/list/')
+  //   .then(response => {
+  //     const value = response.data
+  //     setSelectValue(value)
+  //   })
+  // })
   return (
     <Stack spacing={2} sx={{width: 200}}>
       <Autocomplete

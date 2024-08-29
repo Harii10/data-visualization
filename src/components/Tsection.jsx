@@ -42,7 +42,8 @@ function Tsection() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/nestedlist/")
+      // .get("http://127.0.0.1:8000/nestedlist/")
+      .get('https://jonsnow7.pythonanywhere.com/nestedlist/')
       .then((response) => setSelectedData(response.data))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
@@ -59,8 +60,7 @@ function Tsection() {
   }, []);
 
   useEffect(() => {
-    // axios.get("http://127.0.0.1:8000/list/").then((response) => {
-      axios.get('Jonsnow7.pythonanywhere.com/list/').then((response) => {
+    axios.get("http://127.0.0.1:8000/list/").then((response) => {
       setData(response.data);
     });
   }, []);
