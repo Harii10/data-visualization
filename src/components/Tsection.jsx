@@ -59,7 +59,8 @@ function Tsection() {
   }, []);
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/list/").then((response) => {
+    // axios.get("http://127.0.0.1:8000/list/").then((response) => {
+      axios.get('Jonsnow7.pythonanywhere.com/list/').then((response) => {
       setData(response.data);
     });
   }, []);

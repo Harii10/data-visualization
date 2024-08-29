@@ -17,14 +17,16 @@ function Dashboard() {
 
 
 useEffect(()=>{
-  axios.get('http://127.0.0.1:8000/list/')
+  // axios.get('http://127.0.0.1:8000/list/')
+  axios.get('Jonsnow7.pythonanywhere.com/list/')
   .then((response) => setMaterials(response.data))
   .catch((error) => console.error('Error fetching data:', error))
 }, [])
 
 
 useEffect(()=>{
-  axios.get('http://127.0.0.1:8000/nestedlist/')
+  // axios.get('http://127.0.0.1:8000/nestedlist/')
+  axios.get('Jonsnow7.pythonanywhere.com/nestedlist/')
   .then((response) => setSelectedData(response.data))
   .catch((error) => console.error('Error fetching data:', error))
 }, [])
