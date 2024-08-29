@@ -3,7 +3,7 @@ import React from "react";
 function Contact() {
   return (
     <div>
-      <div className="ml-80 my-10 mx-12 p-5 shadow-lg rounded-xl border border-gray-300 bg-white">
+      <div className="m-0 mx-2 w-96 lg:ml-80 my-10 lg:mx-14 p-5 lg:w-97 shadow-lg rounded-xl border border-gray-300 bg-white">
       <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
           Contact Us
         </h1>
@@ -58,7 +58,7 @@ function Contact() {
           </div>
           <textarea
             id="OrderNotes"
-            class="mt-2 w-97 h-56 rounded-lg border-gray-400 align-top shadow-sm sm:text-sm"
+            class="w-94 lg:w-95 mt-2 h-56 rounded-lg border-gray-400 align-top shadow-sm sm:text-sm"
             placeholder=""
           ></textarea>
         </form>

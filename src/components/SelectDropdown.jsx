@@ -28,8 +28,8 @@ function SelectDropdown({materials, handleSelectChange, selectedValue}) {
           )}
             </Select>
           </FormControl>
-          <div className="flex justify-center items-center mt-10 w-full ">
-            <h3 className="text-5xl font-bold font-roboto-mono">{selectedValue}</h3>
+          <div className="m-0 flex justify-center items-center lg:mt-10 w-full ">
+            <h3 className="text-md lg:text-5xl font-bold font-roboto-mono">{selectedValue}</h3>
           </div>
         </div>
         <div>

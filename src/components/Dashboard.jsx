@@ -59,22 +59,22 @@ const piechartData = selectedName ? [
 
 
   return (
-    <div className="ml-75 mt-10">
+    <div className="m-0 lg:ml-75 mt-10">
       <div className="">
           <Cards/>
       </div>
-      <div className="my-10 mx-2 p-5 shadow-lg rounded-xl border border-gray-300 bg-white">
+      <div className=" p-2 lg:my-10 mx-2 lg:p-5 shadow-lg rounded-xl border border-gray-300 lg:bg-white">
         <LineGrapgh />
       </div>
-      <div className="my-10 mx-2 p-5 shadow-lg rounded-xl border border-gray-300 bg-white">
+      <div className="my-10 mx-2 p-5 shadow-lg rounded-xl border border-gray-300 lg:bg-white">
           <Bchart/>
       </div>
       
-      <div className="flex gap-0">
-      <div className=" w-2/3 my-10 mx-2 shadow-lg rounded-xl border border-gray-300 bg-white h-97">
+      <div className="flex flex-col-reverse lg:flex lg:flex-row gap-0">
+      <div className="w-full lg:w-2/3 my-10 mx-2 shadow-lg rounded-xl border border-gray-300 bg-white h-97">
         <Tables/>
       </div>
-      <div className="flex flex-col gap-20 w-96 my-10 shadow-lg rounded-xl border border-gray-300 bg-white">
+      <div className="mx-2 gap-5 flex flex-col lg:gap-20 w-96 lg:my-10 shadow-lg rounded-xl border border-gray-300 lg:bg-white">
       <div>
       <SelectDropdown
         selectedValue={selectedValue}
@@ -83,7 +83,7 @@ const piechartData = selectedName ? [
         materials={materials}
       />
       </div>
-      <div className="w-96">
+      <div>
       <Chart
         piechartData={piechartData}
       />
@@ -94,8 +94,8 @@ const piechartData = selectedName ? [
       
       
     </div>
-  );
+  )
 }
 
 
-export default Dashboard;
+export default Dashboard

@@ -39,7 +39,7 @@ function Cards() {
   ]
   
   return (
-    <div className='bg-main-10'>
+    <div className='hidden lg:block xl:block 2xl:block bg-main-10'>
         <div className='flex gap-28 ml-6'>
         {dataSets.map((items)=>(
           <div className='flex justify-between items-center w-80 h-24 p-5 shadow-lg rounded-xl border border-gray-300 bg-white'>

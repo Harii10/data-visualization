@@ -19,6 +19,9 @@ export default {
           'roboto-mono': ['"Roboto Mono"', 'monospace']
       },
       width:{
+        '93': '410px',
+        '94': '340px',
+        '95': '1070px',
         '97':'1110px',
         '98': '1250px'
       },

@@ -128,7 +128,7 @@ function Bchart() {
         aria-labelledby="input-item-number"
       />
       <Typography id="input-series-number" gutterBottom>
-        Number of series
+        Number of data
       </Typography>
       <Slider
         value={seriesNb}

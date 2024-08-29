@@ -92,11 +92,11 @@ function Tsection() {
             : "bg-transparent"
         }`}
       >
-        <div>
+        <div className="-ml-56 lg:m-0">
           <Search optionValue={optionValue} setSearchTerm={setSearchTerm} />
         </div>
       </div>
-      <div className="ml-72 my-10 w-98 p-5">
+      <div className="h-72 w-93 lg:ml-72 lg:h-full my-10 lg:w-98 p-5">  
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
