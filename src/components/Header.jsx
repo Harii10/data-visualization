@@ -8,7 +8,7 @@ import { LiaTableSolid } from "react-icons/lia";
 import { PiContactlessPayment } from "react-icons/pi";
 
 function Header() {
-  const [value, setValue] = React.useState("recents");
+  const [value, setValue] = useState("recents");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -25,7 +25,12 @@ function Header() {
                 </span>
 
                 <ul className="mt-12 space-y-3">
-                  <NavLink to="dashboard">
+                  <NavLink
+                    to="dashboard"
+                    className={({isActive})=>
+                    isActive ? 'block rounded-lg bg-blue-500 text-sm font-medium text-white ' : 'block rounded-lg bg-transparent text-sm font-medium'
+                    }
+                  >
                     <li className="block rounded-lg p-4 text-sm font-medium text-white hover:bg-main-40 hover:text-white">
                       Dashboard
                     </li>
@@ -83,13 +88,21 @@ function Header() {
                   </a>
                 </li> */}
 
-                  <NavLink to="tsection">
+                  <NavLink
+                    to="tsection"
+                    className={({isActive})=>
+                    isActive ? 'block rounded-lg bg-blue-500 text-sm font-medium text-white ' : 'block rounded-lg bg-transparent text-sm font-medium'
+                    }
+                  >
                     <li className="block rounded-lg p-4 text-sm font-medium text-white hover:bg-main-40 hover:text-white">
                       Tables
                     </li>
                   </NavLink>
 
-                  <NavLink to="contact">
+                  <NavLink to="contact"
+                  className={({isActive})=>
+                    isActive ? 'block rounded-lg bg-blue-500 text-sm font-medium text-white ' : 'block rounded-lg bg-transparent text-sm font-medium'
+                    }>
                     <li className="block rounded-lg p-4 text-sm font-medium text-white hover:bg-main-40 hover:text-white">
                       Contact Us
                     </li>
@@ -127,30 +140,40 @@ function Header() {
             onChange={handleChange}
             className="flex gap-10 sticky bottom-0"
           >
-            <NavLink to='dashboard'>
-            <BottomNavigationAction
-              className="border border-black"
-              label="Dashboard"
-              value="Dashboard"
-              icon={<RiDashboardFill className="text-2xl" />}
-            />
+            <NavLink to="dashboard"
+            className={({isActive})=>
+                    isActive ? 'block rounded-lg text-blue-500 text-sm font-medi' : 'block rounded-lg bg-transparent text-sm font-medium'
+                    }>
+              <BottomNavigationAction
+                className="border border-black"
+                label="Dashboard"
+                value="Dashboard"
+                icon={<RiDashboardFill className="text-2xl" />}
+              />
             </NavLink>
-            <NavLink to='tsection'>
-            <BottomNavigationAction
-              className="border border-black"
-              label="Table"
-              value="Table"
-              icon={<LiaTableSolid className="text-2xl" />}
-            />
+            <NavLink to="tsection"
+            className={({isActive})=>
+                    isActive ? 'block rounded-lg text-blue-500 text-sm font-medi' : 'block rounded-lg bg-transparent text-sm font-medium'
+                    }>
+              <BottomNavigationAction
+                className="border border-black"
+                label="Table"
+                value="Table"
+                icon={<LiaTableSolid className="text-2xl" />}
+              />
             </NavLink>
-            <NavLink to='contact'>
-            <BottomNavigationAction
-              label="Contact"
-              value="Contact"
-              icon={<PiContactlessPayment className="text-2xl" />}
-            />
+            <NavLink to="contact"
+            className={({isActive})=>
+                    isActive ? 'block rounded-lg text-sm font-medium text-blue-500 ' : 'block rounded-lg bg-transparent text-sm font-medium'
+                    }
+                    >
+              <BottomNavigationAction
+                label="Contact"
+                value="Contact"
+                icon={<PiContactlessPayment className="text-2xl" />}
+              />
             </NavLink>
-            
+
             {/* <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} /> */}
           </BottomNavigation>
         </div>

@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Contact() {
+  
+  
   return (
     <div>
       <div className="m-0 mx-2 w-96 lg:ml-80 my-10 lg:mx-14 p-5 lg:w-97 shadow-lg rounded-xl border border-gray-300 bg-white">
@@ -62,12 +64,14 @@ function Contact() {
             placeholder=""
           ></textarea>
         </form>
-        <button className="mt-5 w-full rounded-md bg-main-30 text-white shadow-sm h-10">
+        
+        <button  className="mt-5 w-full rounded-md bg-main-30 text-white shadow-sm h-10">
           Send
         </button>
+        
       </div>
     </div>
-  );
+  )
 }
 
 export default Contact;
