@@ -1,17 +1,17 @@
-import * as React from "react";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { styled } from "@mui/material/styles";
+import * as React from "react"
+import { useEffect, useState } from "react"
+import axios from "axios"
+import { styled } from "@mui/material/styles"
 import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell, { tableCellClasses } from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import Search from "./Search";
+import Checkbox from "@mui/material/Checkbox"
+import Table from "@mui/material/Table"
+import TableBody from "@mui/material/TableBody"
+import TableCell, { tableCellClasses } from "@mui/material/TableCell"
+import TableContainer from "@mui/material/TableContainer"
+import TableHead from "@mui/material/TableHead"
+import TableRow from "@mui/material/TableRow"
+import Paper from "@mui/material/Paper"
+import Search from "./Search"
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -21,7 +21,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
   },
-}));
+}))
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   "&:nth-of-type(odd)": {
@@ -31,7 +31,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   "&:last-child td, &:last-child th": {
     border: 0,
   },
-}));
+}))
 
 function Tsection() {
   const [data, setData] = useState([]);
@@ -46,42 +46,42 @@ function Tsection() {
       .get('https://jonsnow7.pythonanywhere.com/nestedlist/')
       .then((response) => setSelectedData(response.data))
       .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
-        setIsScrolled(true);
+        setIsScrolled(true)
       } else {
-        setIsScrolled(false);
+        setIsScrolled(false)
       }
-    };
+    }
     window.addEventListener("scroll", handleScroll);
-  }, []);
+  }, [])
 
   useEffect(() => {
     // axios.get("http://127.0.0.1:8000/list/").then((response) => {
       axios.get('https://jonsnow7.pythonanywhere.com/list/').then((response)=>{
-      setData(response.data);
+      setData(response.data)
     })
   }, [])
 
-  const optionValue = data.map((item) => item);
+  const optionValue = data.map((item) => item)
 
   const filteredData = data.filter((item) =>
     item.Name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  )
 
   const sortedData = [...data].sort((a, b) => {
     if (order === "asc") {
-      return a[orderBy] > b[orderBy] ? 1 : -1;
+      return a[orderBy] > b[orderBy] ? 1 : -1
     } else {
-      return a[orderBy] < b[orderBy] ? 1 : -1;
+      return a[orderBy] < b[orderBy] ? 1 : -1
     }
-  });
+  })
 
   const handleSortOrderChange = (event) => {
-    setOrder(event.target.checked ? "desc" : "asc");
+    setOrder(event.target.checked ? "desc" : "asc")
   };
   return (
     <div>
@@ -96,7 +96,7 @@ function Tsection() {
           <Search optionValue={optionValue} setSearchTerm={setSearchTerm} />
         </div>
       </div>
-      <div className="h-72 w-93 lg:ml-72 lg:h-full my-10 lg:w-98 p-5">  
+      <div className="h-72 w-93 lg:ml-72 lg:h-full my-10 lg:w-98 p-5">
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
@@ -164,4 +164,4 @@ function Tsection() {
   );
 }
 
-export default Tsection;
+export default Tsection

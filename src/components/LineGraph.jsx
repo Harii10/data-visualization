@@ -1,5 +1,4 @@
-import { LineChart } from '@tremor/react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { AreaChart } from '@tremor/react'
 

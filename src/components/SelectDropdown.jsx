@@ -36,7 +36,7 @@ function SelectDropdown({materials, handleSelectChange, selectedValue}) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default SelectDropdown;

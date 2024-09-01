@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { SiAlwaysdata } from "react-icons/si";
-import BottomNavigation from "@mui/material/BottomNavigation";
-import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import { RiDashboardFill } from "react-icons/ri";
-import { LiaTableSolid } from "react-icons/lia";
-import { PiContactlessPayment } from "react-icons/pi";
+import React, { useEffect, useState } from "react"
+import { NavLink } from "react-router-dom"
+import { SiAlwaysdata } from "react-icons/si"
+import BottomNavigation from "@mui/material/BottomNavigation"
+import BottomNavigationAction from "@mui/material/BottomNavigationAction"
+import { RiDashboardFill } from "react-icons/ri"
+import { LiaTableSolid } from "react-icons/lia"
+import { PiContactlessPayment } from "react-icons/pi"
 
 function Header() {
-  const [value, setValue] = useState("recents");
+  const [value, setValue] = useState("recents")
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+    setValue(newValue)
+  }
   return (
     <>
       <header>
@@ -182,4 +182,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Header

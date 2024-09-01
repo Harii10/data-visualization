@@ -1,7 +1,8 @@
-import React from "react";
-import { FaWhatsapp } from "react-icons/fa6";
-import { FaLinkedin, FaRegCopyright } from "react-icons/fa";
-import { IoLogoGithub } from "react-icons/io5";
+import React from "react"
+import { FaWhatsapp } from "react-icons/fa6"
+import { FaLinkedin, FaRegCopyright } from "react-icons/fa"
+import { IoLogoGithub } from "react-icons/io5"
+import { IoIosMail } from "react-icons/io"
 
 function Footer() {
   return (
@@ -20,7 +21,7 @@ function Footer() {
             <li>
               <a
                 className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
+                href="https://drive.google.com/file/d/1E0QHH-GJ6ih7N2ld9QYH_kO5NW6PoCo3/view"
               >
                 {" "}
                 About{" "}
@@ -30,20 +31,20 @@ function Footer() {
             <li>
               <a
                 className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
+                href="https://www.naukri.com/mnjuser/profile"
               >
                 {" "}
-                Careers{" "}
+                Naukri{" "}
               </a>
             </li>
 
             <li>
               <a
                 className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
+                href="tel:6379940593"
               >
                 {" "}
-                History{" "}
+                Call{" "}
               </a>
             </li>
 
@@ -54,26 +55,6 @@ function Footer() {
               >
                 {" "}
                 Services{" "}
-              </a>
-            </li>
-
-            <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
-              >
-                {" "}
-                Projects{" "}
-              </a>
-            </li>
-
-            <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
-              >
-                {" "}
-                Blog{" "}
               </a>
             </li>
           </ul>
@@ -92,6 +73,12 @@ function Footer() {
                     <IoLogoGithub className="h-6 w-6 text-gray-700 hover:text-gray-700/75"/>
                 </a>
             </li>
+            
+            {/* <li>
+                <a href="tel:6379940593">
+                    <IoIosMail className="h-6 w-6 text-gray-700 hover:text-gray-700/75"/>
+                </a>
+            </li> */}
           </ul>
         </div>
         <hr className='border border-gray-900'></hr>
@@ -104,4 +91,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default Footer

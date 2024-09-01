@@ -1,9 +1,8 @@
-import { Card, Metric, Text } from '@tremor/react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { BsBuildings } from "react-icons/bs";
+import { BsBuildings } from "react-icons/bs"
 import {RiMoneyDollarCircleFill } from "react-icons/ri"
-import { GiDatabase } from "react-icons/gi";
+import { GiDatabase } from "react-icons/gi"
 
 
 function Cards() {

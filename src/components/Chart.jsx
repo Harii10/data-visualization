@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { PieChart } from "@mui/x-charts/PieChart";
+import React, { useEffect, useState } from "react"
+import { PieChart } from "@mui/x-charts/PieChart"
 
 function Chart({piechartData}) {
   
@@ -28,4 +28,4 @@ function Chart({piechartData}) {
   );
 }
 
-export default Chart;
+export default Chart

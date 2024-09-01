@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { RiFlag2Line } from "@remixicon/react";
+import React, { useEffect, useState } from "react"
+import axios from "axios"
 
 
 function Tables() {
-  const [tData, setTdata] = useState([]);
+  const [tData, setTdata] = useState([])
 
   useEffect(() => {
     // axios.get("http://127.0.0.1:8000/list/")
     axios.get('https://jonsnow7.pythonanywhere.com/list/')
     .then((response) => {
-      setTdata(response.data);
+      setTdata(response.data)
     });
   });
 
@@ -63,4 +62,4 @@ function Tables() {
   );
 }
 
-export default Tables;
+export default Tables

@@ -1,46 +1,16 @@
-// import React, { useEffect, useState } from 'react'
-// import { BarChart, FunnelChart } from '@tremor/react';
-// import axios from 'axios'
-
-
-// function Bchart() {
-//     const [bData, setBdata] = useState([])
-
-//     useEffect(()=>{
-//         axios.get('http://127.0.0.1:8000/chartlist/')
-//         .then(response =>{
-//             setBdata(response.data)
-//         })
-//     })
-//   return (
-//     <div>
-//         <BarChart
-//     data={bData}
-//     index="Name"
-//     categories={['Cost_per_Unit']}
-//     colors={['blue']}
-//     // valueFormatter={dataFormatter}
-//     yAxisWidth={48}
-//     onValueChange={(v) => console.log(v)}
-//     />
-//     </div>
-//   )
-// }
-
-// export default Bchart
-import React, { useEffect, useState } from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Slider from '@mui/material/Slider';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import { BarChart } from '@mui/x-charts/BarChart';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+import Slider from '@mui/material/Slider'
+import FormControlLabel from '@mui/material/FormControlLabel'
+import Checkbox from '@mui/material/Checkbox'
+import { BarChart } from '@mui/x-charts/BarChart'
+import axios from 'axios'
 
 function Bchart() {
-  const [seriesNb, setSeriesNb] = useState(2);
-  const [itemNb, setItemNb] = useState(6);
-  const [skipAnimation, setSkipAnimation] = useState(false);
+  const [seriesNb, setSeriesNb] = useState(2)
+  const [itemNb, setItemNb] = useState(6)
+  const [skipAnimation, setSkipAnimation] = useState(false)
   const [seriesData, setSeriesData] = useState([])
   
 
@@ -141,7 +111,7 @@ function Bchart() {
     </Box>
     
     
-  );
+  )
 
   
 }
