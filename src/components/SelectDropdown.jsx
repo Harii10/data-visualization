@@ -4,9 +4,7 @@ import MenuItem from "@mui/material/MenuItem"
 import FormControl from "@mui/material/FormControl"
 import Select from "@mui/material/Select"
 
-
-function SelectDropdown({materials, handleSelectChange, selectedValue}) {
-  
+function SelectDropdown({ materials, handleSelectChange, selectedValue }) {
   return (
     <div>
       <div className="flex flex-col justify-center items-center">
@@ -18,22 +16,21 @@ function SelectDropdown({materials, handleSelectChange, selectedValue}) {
               onChange={handleSelectChange}
               label="Name"
             >
-            <MenuItem>Select</MenuItem>
-              {materials.map((item) => 
-            (
-              <MenuItem key={item.Name} value={item.Name}>
-                {item.Name}
-              </MenuItem>
-            )
-          )}
+              <MenuItem>Select</MenuItem>
+              {materials.map((item) => (
+                <MenuItem key={item.Name} value={item.Name}>
+                  {item.Name}
+                </MenuItem>
+              ))}
             </Select>
           </FormControl>
           <div className="m-0 flex justify-center items-center lg:mt-10 w-full ">
-            <h3 className="text-md lg:text-5xl font-bold font-roboto-mono">{selectedValue}</h3>
+            <h3 className="text-md lg:text-5xl font-bold font-roboto-mono">
+              {selectedValue}
+            </h3>
           </div>
         </div>
-        <div>
-        </div>
+        <div></div>
       </div>
     </div>
   )

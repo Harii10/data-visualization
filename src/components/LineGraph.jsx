@@ -32,7 +32,7 @@ useEffect(()=>{
     
     
 
-  );
+  )
 }
 
 export default LineGraph

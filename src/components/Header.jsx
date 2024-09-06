@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react"
-import { NavLink } from "react-router-dom"
-import { SiAlwaysdata } from "react-icons/si"
-import BottomNavigation from "@mui/material/BottomNavigation"
-import BottomNavigationAction from "@mui/material/BottomNavigationAction"
-import { RiDashboardFill } from "react-icons/ri"
-import { LiaTableSolid } from "react-icons/lia"
-import { PiContactlessPayment } from "react-icons/pi"
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import { SiAlwaysdata } from "react-icons/si";
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import { RiDashboardFill } from "react-icons/ri";
+import { LiaTableSolid } from "react-icons/lia";
+import { PiContactlessPayment } from "react-icons/pi";
 
 function Header() {
-  const [value, setValue] = useState("recents")
+  const [value, setValue] = useState("recents");
 
   const handleChange = (event, newValue) => {
-    setValue(newValue)
-  }
+    setValue(newValue);
+  };
   return (
     <>
       <header>
@@ -27,8 +27,10 @@ function Header() {
                 <ul className="mt-12 space-y-3">
                   <NavLink
                     to="dashboard"
-                    className={({isActive})=>
-                    isActive ? 'block rounded-lg bg-blue-500 text-sm font-medium text-white ' : 'block rounded-lg bg-transparent text-sm font-medium'
+                    className={({ isActive }) =>
+                      isActive
+                        ? "block rounded-lg bg-blue-500 text-sm font-medium text-white "
+                        : "block rounded-lg bg-transparent text-sm font-medium"
                     }
                   >
                     <li className="block rounded-lg p-4 text-sm font-medium text-white hover:bg-main-40 hover:text-white">
@@ -36,62 +38,12 @@ function Header() {
                     </li>
                   </NavLink>
 
-                  {/* <li>
-                  <details className="group [&_summary::-webkit-details-marker]:hidden">
-                    <summary className="flex cursor-pointer items-center justify-between rounded-lg p-4 text-white hover:bg-main-40 hover:text-white">
-                      <span className="text-sm font-medium"> Teams </span>
-
-                      <span className="shrink-0 transition duration-300 group-open:-rotate-180">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </span>
-                    </summary>
-
-                    <ul className="mt-2 space-y-1 p-4">
-                      <li>
-                        <a
-                          href="#"
-                          className="block rounded-lg p-4 text-sm font-medium text-white hover:bg-main-40 hover:text-white"
-                        >
-                          Banned Users
-                        </a>
-                      </li>
-
-                      <li>
-                        <a
-                          href="#"
-                          className="block rounded-lg p-4 text-sm font-medium text-white hover:bg-main-40 hover:text-white"
-                        >
-                          Calendar
-                        </a>
-                      </li>
-                    </ul>
-                  </details>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="block rounded-lg p-4 text-sm font-medium text-white hover:bg-main-40 hover:text-white"
-                  >
-                    Billing
-                  </a>
-                </li> */}
-
                   <NavLink
                     to="tsection"
-                    className={({isActive})=>
-                    isActive ? 'block rounded-lg bg-blue-500 text-sm font-medium text-white ' : 'block rounded-lg bg-transparent text-sm font-medium'
+                    className={({ isActive }) =>
+                      isActive
+                        ? "block rounded-lg bg-blue-500 text-sm font-medium text-white "
+                        : "block rounded-lg bg-transparent text-sm font-medium"
                     }
                   >
                     <li className="block rounded-lg p-4 text-sm font-medium text-white hover:bg-main-40 hover:text-white">
@@ -99,10 +51,14 @@ function Header() {
                     </li>
                   </NavLink>
 
-                  <NavLink to="contact"
-                  className={({isActive})=>
-                    isActive ? 'block rounded-lg bg-blue-500 text-sm font-medium text-white ' : 'block rounded-lg bg-transparent text-sm font-medium'
-                    }>
+                  <NavLink
+                    to="contact"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "block rounded-lg bg-blue-500 text-sm font-medium text-white "
+                        : "block rounded-lg bg-transparent text-sm font-medium"
+                    }
+                  >
                     <li className="block rounded-lg p-4 text-sm font-medium text-white hover:bg-main-40 hover:text-white">
                       Contact Us
                     </li>
@@ -140,10 +96,14 @@ function Header() {
             onChange={handleChange}
             className="flex gap-10 sticky bottom-0"
           >
-            <NavLink to="dashboard"
-            className={({isActive})=>
-                    isActive ? 'block rounded-lg text-blue-500 text-sm font-medi' : 'block rounded-lg bg-transparent text-sm font-medium'
-                    }>
+            <NavLink
+              to="dashboard"
+              className={({ isActive }) =>
+                isActive
+                  ? "block rounded-lg text-blue-500 text-sm font-medi"
+                  : "block rounded-lg bg-transparent text-sm font-medium"
+              }
+            >
               <BottomNavigationAction
                 className="border border-black"
                 label="Dashboard"
@@ -151,10 +111,14 @@ function Header() {
                 icon={<RiDashboardFill className="text-2xl" />}
               />
             </NavLink>
-            <NavLink to="tsection"
-            className={({isActive})=>
-                    isActive ? 'block rounded-lg text-blue-500 text-sm font-medi' : 'block rounded-lg bg-transparent text-sm font-medium'
-                    }>
+            <NavLink
+              to="tsection"
+              className={({ isActive }) =>
+                isActive
+                  ? "block rounded-lg text-blue-500 text-sm font-medi"
+                  : "block rounded-lg bg-transparent text-sm font-medium"
+              }
+            >
               <BottomNavigationAction
                 className="border border-black"
                 label="Table"
@@ -162,11 +126,14 @@ function Header() {
                 icon={<LiaTableSolid className="text-2xl" />}
               />
             </NavLink>
-            <NavLink to="contact"
-            className={({isActive})=>
-                    isActive ? 'block rounded-lg text-sm font-medium text-blue-500 ' : 'block rounded-lg bg-transparent text-sm font-medium'
-                    }
-                    >
+            <NavLink
+              to="contact"
+              className={({ isActive }) =>
+                isActive
+                  ? "block rounded-lg text-sm font-medium text-blue-500 "
+                  : "block rounded-lg bg-transparent text-sm font-medium"
+              }
+            >
               <BottomNavigationAction
                 label="Contact"
                 value="Contact"

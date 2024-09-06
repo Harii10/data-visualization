@@ -1,16 +1,16 @@
-import React, { useState } from "react"
-import Snackbar from "@mui/material/Snackbar"
+import React, { useState } from "react";
+import Snackbar from "@mui/material/Snackbar";
 
 function Contact() {
-  const [successAlert, setSuccessAlert] = useState(false)
-  const [errorAlert, setErrorAlert] = useState(false)
+  const [successAlert, setSuccessAlert] = useState(false);
+  const [errorAlert, setErrorAlert] = useState(false);
 
   const message = (event) => {
-    event.preventDefault()
-    const name = document.getElementById("Name")
-    const lName = document.getElementById("lName")
-    const email = document.getElementById("Email")
-    const msg = document.getElementById("OrderNotes")
+    event.preventDefault();
+    const name = document.getElementById("Name");
+    const lName = document.getElementById("lName");
+    const email = document.getElementById("Email");
+    const msg = document.getElementById("OrderNotes");
 
     if (
       name.value === "" ||
@@ -18,13 +18,13 @@ function Contact() {
       email.value === "" ||
       msg.value === ""
     ) {
-      setErrorAlert(true)
+      setErrorAlert(true);
     } else {
-      setSuccessAlert(true)
-      name.value = ""
-      lName.value = ""
-      email.value = ""
-      msg.value = ""
+      setSuccessAlert(true);
+      name.value = "";
+      lName.value = "";
+      email.value = "";
+      msg.value = "";
     }
   };
   return (
@@ -123,4 +123,4 @@ function Contact() {
   );
 }
 
-export default Contact
+export default Contact;
