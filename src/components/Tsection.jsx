@@ -37,8 +37,8 @@ function Tsection() {
 
   useEffect(() => {
     axios
-      // .get("http://127.0.0.1:8000/nestedlist/")
-      .get("https://jonsnow7.pythonanywhere.com/nestedlist/")
+      .get("http://127.0.0.1:8000/nestedlist/")
+      // .get("https://jonsnow7.pythonanywhere.com/nestedlist/")
       .then((response) => setSelectedData(response.data))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
@@ -55,13 +55,14 @@ function Tsection() {
   }, []);
 
   useEffect(() => {
-    // axios.get("http://127.0.0.1:8000/list/").then((response) => {
-    axios.get("https://jonsnow7.pythonanywhere.com/list/").then((response) => {
+    // axios.get("https://jonsnow7.pythonanywhere.com/list/")
+    axios.get("http://127.0.0.1:8000/list/")
+    .then((response) => {
       setData(response.data);
-    });
-  }, []);
+    })
+  }, [])
 
-  const optionValue = data.map((item) => item);
+  const optionValue = data.map((item) => item)
 
   const filteredData = data.filter((item) =>
     item.Name.toLowerCase().includes(searchTerm.toLowerCase())

@@ -9,8 +9,8 @@ function LineGraph() {
 
 
 useEffect(()=>{
-  // axios.get('http://127.0.0.1:8000/chartlist/')
-  axios.get('https://jonsnow7.pythonanywhere.com/chartlist/')
+  axios.get('http://127.0.0.1:8000/chartlist/')
+  // axios.get('https://jonsnow7.pythonanywhere.com/chartlist/')
   .then( response => {
     setNdata(response.data)
   } 

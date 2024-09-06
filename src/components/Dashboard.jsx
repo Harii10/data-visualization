@@ -14,17 +14,17 @@ function Dashboard() {
   const [selectedData, setSelectedData] = useState([]);
 
   useEffect(() => {
-    // axios.get('http://127.0.0.1:8000/list/')
-    axios
-      .get("https://jonsnow7.pythonanywhere.com/list/")
+    axios.get('http://127.0.0.1:8000/list/')
+    // axios
+    //   .get("https://jonsnow7.pythonanywhere.com/list/")
       .then((response) => setMaterials(response.data))
       .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  }, [])
 
   useEffect(() => {
-    // axios.get('http://127.0.0.1:8000/nestedlist/')
-    axios
-      .get("https://jonsnow7.pythonanywhere.com/nestedlist/")
+    axios.get('http://127.0.0.1:8000/nestedlist/')
+    // axios
+    //   .get("https://jonsnow7.pythonanywhere.com/nestedlist/")
       .then((response) => setSelectedData(response.data))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
