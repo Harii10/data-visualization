@@ -5,8 +5,8 @@ function Tables() {
   const [tData, setTdata] = useState([]);
 
   useEffect(() => {
-    // axios.get("https://jonsnow7.pythonanywhere.com/list/")
-    axios.get("http://127.0.0.1:8000/list/").then((response) => {
+    axios.get("https://jonsnow7.pythonanywhere.com/list/")
+    .then((response) => {
       setTdata(response.data);
     })
   })

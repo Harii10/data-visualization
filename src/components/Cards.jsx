@@ -8,7 +8,7 @@ function Cards() {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/list/").then((response) => {
+    axios.get("https://jonsnow7.pythonanywhere.com/list/").then((response) => {
       const tranformedData = response.data;
       setCards(tranformedData);
     });

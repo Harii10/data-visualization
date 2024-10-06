@@ -2,7 +2,6 @@ import React from "react";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FaLinkedin, FaRegCopyright } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io5";
-import { IoIosMail } from "react-icons/io";
 
 function Footer() {
   return (

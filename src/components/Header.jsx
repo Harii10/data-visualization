@@ -12,7 +12,7 @@ function Header() {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-  };
+  }
   return (
     <>
       <header>
