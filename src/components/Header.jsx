@@ -89,12 +89,12 @@ function Header() {
             </div>
           </div>
         </div>
-        <div className="fixed bottom-0 shadow-2xl lg:hidden md:hidden xl:hidden 2xl:hidden ">
+        <div className="fixed bottom-0 z-100 shadow-2xl lg:hidden md:hidden xl:hidden 2xl:hidden ">
           <BottomNavigation
             sx={{ width: 400 }}
             value={value}
             onChange={handleChange}
-            className="flex gap-10 sticky bottom-0"
+            className="flex gap-10 sticky bottom-0 z-100"
           >
             <NavLink
               to="dashboard"
@@ -114,10 +114,8 @@ function Header() {
             <NavLink
               to="tsection"
               className={({ isActive }) =>
-                isActive
-                  ? "block rounded-lg text-blue-500 text-sm font-medi"
-                  : "block rounded-lg bg-transparent text-sm font-medium"
-              }
+              `duration-200 ${isActive ? "text-pink-600" : "text-white"}`
+            }
             >
               <BottomNavigationAction
                 className="border border-black"
@@ -126,7 +124,7 @@ function Header() {
                 icon={<LiaTableSolid className="text-2xl" />}
               />
             </NavLink>
-            <NavLink
+            {/* <NavLink
               to="contact"
               className={({ isActive }) =>
                 isActive
@@ -139,7 +137,7 @@ function Header() {
                 value="Contact"
                 icon={<PiContactlessPayment className="text-2xl" />}
               />
-            </NavLink>
+            </NavLink> */}
 
             {/* <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} /> */}
           </BottomNavigation>
